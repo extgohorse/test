@@ -27,5 +27,5 @@ df_error_per_day = df_filter.groupBy(date_format(df_filter["time"], "yyyy/mm/dd"
 print "Quantidade de erros 404 por dia."
 df_error_per_day.show()
 
-"O total de bytes retornados."
+print "O total de bytes retornados."
 df.select(df["bytes"]).groupBy().sum().show()
