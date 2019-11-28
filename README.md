@@ -1,4 +1,5 @@
 # test
+RESPOSTAS TEORICAS
 
 1- Persistir na memoria um rdd/dataframe para que o acesso aos dados seja feito de forma mais performaatica
 
@@ -11,3 +12,7 @@
 5- Pois o reduce by key pre-combina as chaves em comum antes de realizar o merge do resultados de cada executores, evitando assim maior trafego de rede
 
 6- Quantidade de ocorrencias por palavra
+
+RESPOSTAS PRATICAS
+
+As respostas praticas foram feitas no codigo
