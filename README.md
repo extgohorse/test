@@ -17,5 +17,5 @@ RESPOSTAS PRATICAS
 
 As respostas praticas foram desenvolvidas utilizando a linguagem python.
 
--Os dados da Nasa foram enviados para o hdfs, na pasta /user/root/nasa
--Para rodar o programa: spark-submit testesemantix.py
+Os dados da Nasa foram enviados para o hdfs, na pasta /dados/nasa 
+Para rodar o programa: spark-submit testesemantix.py
