@@ -7,9 +7,10 @@ df = df.select(df[0].alias('hostname'), to_timestamp(substring(concat(df[3], lit
 
 df.show(truncate=False)
 
-#Número de hosts únicos.
+print "Número de hosts únicos."
 df.select(df["hostname"]).distinct().count()
-#O total de erros 404.
+
+print "O total de erros 404."
 df.where(df["return_code"] == 404).count()
 
 df_filter = df.where(df["return_code"] == 404)
@@ -18,13 +19,13 @@ df_group = df_filter.groupBy(df_filter["url"]).count()
 
 df_group = df_group.orderBy(df_group["count"].desc()).limit(5)
 
-#Os 5 URLs que mais causaram erro 404.
+print "Os 5 URLs que mais causaram erro 404."
 df_group.show()
 
 df_error_per_day = df_filter.groupBy(date_format(df_filter["time"], "yyyy/mm/dd").alias("day")).count()
 
-#Quantidade de erros 404 por dia.
+print "Quantidade de erros 404 por dia."
 df_error_per_day.show()
 
-#O total de bytes retornados.
+"O total de bytes retornados."
 df.select(df["bytes"]).groupBy().sum().show()
