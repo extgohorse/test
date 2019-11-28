@@ -1,7 +1,7 @@
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
 
-df = spark.read.options(delimiter=" ", quote="").csv("/dados/nasa")
+df = spark.read.options(delimiter=" ", quote="").csv("/user/root/nasa")
 
 df = df.select(df[0].alias('hostname'), to_timestamp(substring(concat(df[3], lit(" "), df[4]), 2, 26), "dd/MMM/yyyy:HH:mm:ss Z").alias('time'), df[6].alias('url'), df[8].cast(IntegerType()).alias('return_code'), df[9].cast(IntegerType()).alias('bytes'))
 
