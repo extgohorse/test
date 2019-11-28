@@ -15,4 +15,7 @@ RESPOSTAS TEORICAS
 
 RESPOSTAS PRATICAS
 
-As respostas praticas foram feitas no codigo
+As respostas praticas foram desenvolvidas utilizando a linguagem python.
+
+-Os dados da Nasa foram enviados para o hdfs, na pasta /user/root/nasa
+-Para rodar o programa: spark-submit testesemantix.py
